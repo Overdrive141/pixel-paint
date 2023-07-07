@@ -20,7 +20,7 @@ This portion of the documentation explains the features of the implemented solut
    ```
 4. Open a separate terminal to start the client:
    ```
-   npm run start:
+   npm run start
    ```
 
 ## Information
@@ -42,11 +42,6 @@ This portion of the documentation explains the features of the implemented solut
  5. Whenever a client draws on the canvas, a message `type: draw` is sent to the server with the (x, y, color). `x` and `y` here are the coordinates of the mouse position relative to the canvas bounds, not the screen or the window.
  6. The server consumes this message and broadcasts a message to all connected clients with the updated canvasList by sending a message `type: draw` that uses the same drawPixel() function to update canvas for all connected clients
  7. The last message type is `type: updateUserList` that is a broadcast message sent by server to all connected clients whenever a new user joins/connects to the server. All clients (except the user itself) consume this message by updating their user list.
-
- 
-
-- **File System**: No database is being used. Everything is being done on the filesystem using Node's 'fs' module.
-- **Metadata Management**: Metadata related to files are being saved in a json file inside `uploads` folder
 
 ---
 
