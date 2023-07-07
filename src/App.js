@@ -69,6 +69,7 @@ function App() {
     }
   }, [lastMessage]);
 
+  // TODO: Move this to helpers folder where this function and other functions from DrawingCanvas component can be defined to organize them better.
   const drawPixel = ({ x, y, color }) => {
     if (canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");

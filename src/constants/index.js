@@ -5,4 +5,4 @@ export const CANVAS_CONSTANTS = {
   LINE_CAP: "round",
 };
 
-export const SOCKET_API_URL = "ws://10.0.0.111:8080";
+export const SOCKET_API_URL = "ws://localhost:8080";
