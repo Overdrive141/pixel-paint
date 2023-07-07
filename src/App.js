@@ -55,6 +55,7 @@ function App() {
           setColor(data.color);
           localStorage.setItem("username", data.username);
           data.canvasState.forEach(drawPixel);
+          setUserList(data.userList);
           break;
         case "draw":
           drawPixel(data);

@@ -15,7 +15,7 @@ const generateRandomColor = () => {
 const broadcast = (wss, data, ws) => {
   wss.clients.forEach((client) => {
     // if client is ready => send them the userlist of all connected users to the paint canvas
-    if (client.readyState === WebSocket.OPEN) {
+    if (client !== ws && client.readyState === WebSocket.OPEN) {
       try {
         console.log("Broadcast Message Sent: ", data);
         client.send(data);

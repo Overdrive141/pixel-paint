@@ -40,7 +40,6 @@ const initWebSocket = (server) => {
 
       switch (type) {
         case "init": {
-          console.log(user, userData);
           if (!user || !userData[user]) {
             userCount++;
             username = "User " + userCount;
